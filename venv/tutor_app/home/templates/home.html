@@ -1,0 +1,341 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+
+.img1 {
+    opacity: 0.20;
+}
+.img2:hover{
+      -moz-box-shadow: 0 0 10px #ccc;
+      -webkit-box-shadow: 0 0 10px #ccc;
+      box-shadow: 0 0 10px #ccc;
+      cursor: pointer;
+
+}
+.container1 {
+    position: relative;
+    text-align: center;
+    
+  }
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f13c20;
+    font-size: 7em; 
+    font-family: 'Lora', serif;
+  }
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px; 
+}
+
+.centered1 {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #C7493A;
+    font-size: 3em; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+
+.footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #ebe3e0;
+            color: #83563f;
+            text-align: center;
+            padding-top: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: normal;
+            font-style: italic;
+         }
+
+.button {
+    font-family: 'Lora', serif;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 3px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #89c299;
+    border-radius: 15px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 45px;
+  }
+
+  .button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #89c299;
+    border-radius: 15px;
+    position: absolute;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 50px;
+  }
+  
+  .button1:hover {
+    background-color: #b1ccb9;
+    color: white;
+  }
+  .button2:hover {
+    background-color: #b1ccb9;
+    color: white;
+  }
+
+.hero0 {
+    background-color: #e0b9a5;
+    padding: 10px;
+    width: 100%; 
+}
+.hero0 p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-right: 10px;
+    text-align: center;
+    color:#83563f;
+}
+  *{
+    margin: 0;
+    padding: 0;
+}
+.hero{
+    background: #e4d8d4;
+    height: 100vh;
+    width: 100%; 
+    position: relative;
+}
+
+.hero h1{
+    text-align: center;
+    padding-top:40px;
+    font-size: 60px;
+    color: #f13c20;
+}
+
+.slide-row{
+    display: flex;
+    width: 3200px;
+    transition: 0.5s;
+}
+.slide-col{
+    width: 800px;
+    height: 350px;
+    position: relative;
+}
+
+.user-text{
+    background: #89c299;
+    width: 770px;
+    height: 245px;
+    position: absolute;
+    left: 5;
+    top: 35%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    padding: 35px;
+    box-sizing: border-box; 
+    z-index: 2;
+}
+main {
+    background: #e0b9a5;
+}
+.p{
+    color: #a35229;
+}
+.description{
+    font-size: 18px;
+    line-height: 24px;
+    color: #83563f; 
+}
+.user-text h3{
+    margin: 35px 0 5px;
+    color: #a35229;
+}
+
+.container{
+    width: 800px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.indicator{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px;
+}
+
+.btn{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 4px;
+    border-radius: 15px;
+    background: #C7493A;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.active{
+    width: 45px;
+}
+
+.testimonial{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+    </style>
+</head>
+<body>
+<header>
+
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <div class="container1">
+       <img src="{% static 'home/home-headpic.jpg'%}" class="img1" alt="Home Picture" style="width: 100%;">
+       <div class="centered">Tutor Match</div>
+       <div class="centered1">Start making a change to your grades!</div>
+       <div class="top-left"><a href="index.html">
+        <img alt="Logo" src="{% static 'home/logo.png'%}" class="img2" width="183" height="150"></a></div>
+        <div class="w3-container w3-center w3-animate-opacity">
+            <button class="button button1" onclick="location.href = 'http://localhost:8000/login/form/'">Sign up!</button>
+            <button class="button button2" onclick="location.href = 'http://localhost:8000/login/'">Log in!</button>
+       </div>
+    </div>
+</div>
+</header>
+<main>
+<div class="hero0">
+    <p>Tutor Match is a website that enables students to get help. We, the creators, have developed this website to help students, educationally, with what ever they may need help with. There are many online tutors that are willing to help! All you have to do is register now, and fill out the form so you can get help! There will be tutors available at various times and if you can't find a tutor that is available now, you can always schedule a meeting with them.  
+    </p>
+</div>
+<div class="hero">
+    <h1>Testimonials</h1>
+    <div class="container">
+        <div class="indicator">
+            <span class="btn active"></span>
+            <span class="btn"></span>
+            <span class="btn"></span>
+            <span class="btn"></span>
+        </div>
+    <div class="testimonial">
+        <div class="slide-row" id="slide">
+            <div class="slide-col">
+                <div class="user-text">
+                    <p class="description">"As a teacher, I am extremely happy that a website such as this has been created. Being able to help students, and seeing their progress during these difficult times is absolutely amazing. I hope to meet more students and help them succeed!"</p>
+                    <h3>John Smith</h3>
+                    <p class="p">Teacher - Math</p>
+                </div>
+                
+            </div>
+            <div class="slide-col">
+                <div class="user-text">
+                    <p class="description">"I am a student tutor who is getting volunteer hours at home. I love volunteering on Tutor Match because it makes a difference in other's lives. I love seeing students' English and Math get better, especially during distance learning."</p>
+                    <h3>Kate Robbins</h3>
+                    <p class="p">Student Tutor - English and Math</p>
+                </div>
+            </div>
+            <div class="slide-col">
+                <div class="user-text">
+                    <p class="description">"I have recently signed up to tutor students, and this website is incredible. Not only is it user-friendly, but it is also made to help every student. Students - do not hesitate to reach out and ask for help!"</p>
+                    <h3>Ben Myler</h3>
+                    <p class="p">Student Teacher - History</p>
+                </div>
+            </div>
+            <div class="slide-col">
+                <div class="user-text">
+                    <p class="description">"I think everyone who is good at even one subject should sign up for this website because along with helping others, it will also help you! You get volunteer hours and it looks good on College Applications."</p>
+                    <h3>Joe Blow</h3>
+                    <p class="p">Student Tutor - Science</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+var btn = document.getElementsByClassName("btn");
+var slide = document.getElementById("slide");
+
+btn[0].onclick = function(){
+    slide.style.transform = "translateX(0px)";
+    for(i=0;i<4;i++){
+        btn[i].classList.remove("active");
+    }
+    this.classList.add("active");
+}
+btn[1].onclick = function(){
+    slide.style.transform = "translateX(-800px)";
+    for(i=0;i<4;i++){
+        btn[i].classList.remove("active");
+    }
+    this.classList.add("active");
+}
+btn[2].onclick = function(){
+    slide.style.transform = "translateX(-1600px)";
+    for(i=0;i<4;i++){
+        btn[i].classList.remove("active");
+    }
+    this.classList.add("active");
+}
+btn[3].onclick = function(){
+    slide.style.transform = "translateX(-2400px)";
+    for(i=0;i<4;i++){
+        btn[i].classList.remove("active");
+    }
+    this.classList.add("active");
+}
+</script>
+<div class="footer">
+    <p>Created by: Psi Padhya, Hunaid Khan, Mir Padhya, & Dhruv Shah</p>
+  </div>
+</main>
+</body>
+</html>
