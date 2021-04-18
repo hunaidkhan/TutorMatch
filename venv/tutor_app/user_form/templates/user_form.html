@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <title>Register</title>
+    <style>
+        /* Style the header: fixed position (always stay at the top) */
+        .header {
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        background-color: #f1f1f1;
+        }
+
+        /* The progress container (grey background) */
+        .progress-container {
+        width: 100%;
+        height: 5px;
+        background: #ccc;
+        }
+
+        /* The progress bar (scroll indicator) */
+        .progress-bar {
+        height: 5px;
+        background: #f94d00;
+        width: 0%;
+        }
+        h1
+        {
+            font-family: 'Ramabhadra';
+        }
+        #heading1
+        {
+            margin-top: 90px;
+            font-size: 400%;
+            margin-bottom: 40px;
+            
+        }
+        .form-control
+        {
+            width:40%;
+            margin-left: 405px;
+            padding: 13px;
+            font-family: 'Merriweather';
+            color: #f13c20;
+            font-weight:600;
+            font-size: 118%;
+        }
+        #information
+        {
+            color: #f13c20;
+        }
+        #heading2
+        {
+            margin-top: 80px;
+            font-size: 400%;
+            margin-bottom: 80px;
+
+        }
+        @keyframes transitionIn
+        {
+            from{
+                opacity: 0;
+                transform: translateY(20px);
+                transform: translate(-20px);
+            }
+            to{
+                opacity: 1;
+                transform: translate(0);
+
+            }
+        }
+        @keyframes transition2
+        {
+            from{
+                padding: 1px;
+            }
+            to{
+                padding: 13px;
+            }
+        }
+        .form-control
+        {
+            animation: transition2 1s;
+        }
+        #container
+        {
+            animation: transitionIn 1s;
+            overflow: hidden;
+        }
+        #checkbox_container1
+        {
+            padding: 2px;
+        }
+        #checkbox_container2
+        {
+            float: right;
+            margin-right: 800px;
+            display: inline-block;
+            margin-top: -235px;
+        }
+        #form_interests .form-check
+        {
+            left: 400px;
+            font-size: 140%;
+            padding: 7px;
+        }
+        #form_contact .form-control
+        {
+            color: #f13c20;
+        }
+        #message
+        {
+            margin-left: 405px;
+            font-weight: 400;
+        }
+        #defaultCheck1,#defaultCheck2
+        {
+            height: 18px;
+            width: 15px;
+        }
+        #defaultCheck2:checked
+        {
+            background-color: #f13c20;
+        }
+        #register
+        {
+            background-color: #f13c20;
+            border: none;
+            border-radius: 7px;
+            align-items: center;
+            margin-left: 600px;
+            margin-top: 60px;
+            margin-bottom: 100px;
+            width: 100px;
+            height: 45px;
+            font-size: 120%;
+            padding: 5px;
+            transform: scale(1);
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.5s, transform 0.5s;
+        }
+        #register:hover{
+            background-color: #a13423;
+            transform: scale(1.1);
+        box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.5s, transform 0.5s;
+        }
+        #inter
+        {
+            color: #f13c20;
+        }
+    </style>
+  </head>
+  <body>
+    
+    <div class="header">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </div>
+    <div id="container">
+        <div id="form">
+            <div id="form_contact">
+                <h1 class="text-center" id="heading1">Contact <span id="information">Info</span>rmation</h1>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name *" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last Name *" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address *" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" type="password" aria-describedby="emailHelp" placeholder="Password *" onkeyup="check();" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="confirm_password" type="confirm_password" aria-describedby="emailHelp" placeholder="Confirm Password *" onkeyup="check();" required>
+                    <span id='message'></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="school_name" aria-describedby="emailHelp" placeholder="School Name">
+                </div>
+            </div>
+            <div id="form_interests">
+                <h1 class="text-center" id="heading2">Choose <span id="inter">Inter</span>ests</h1>
+                <div id="checkbox_container1">
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="humanities" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                        Humanities
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                        <label class="form-check-label" for="defaultCheck2">
+                        Psychology
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                        <label class="form-check-label" for="defaultCheck2">
+                        Physics
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                        <label class="form-check-label" for="defaultCheck2">
+                        Chemistry
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                        <label class="form-check-label" for="defaultCheck2">
+                        Biology
+                        </label>
+                    </div>
+                </div>
+                <div id="checkbox_container2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                        <label class="form-check-label" for="defaultCheck2">
+                        Calculus
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                        <label class="form-check-label" for="defaultCheck2">
+                        English
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                        <label class="form-check-label" for="defaultCheck2">
+                        History
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                        <label class="form-check-label" for="defaultCheck2">
+                        Algebra
+                        </label>
+                    </div>
+                    <div class="form-check" >
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                        <label class="form-check-label" for="defaultCheck2">
+                        Mechanics
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div><button id="register" class="btn btn-primary text-center" onclick="location.href = 'http://localhost:8000/tutor/'">Register</button></div>
+        </div>
+    </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- javascript for progress bar -->
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+
+        function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+    <!-- To check for password -->
+    <script>
+        var check = function() 
+        {
+
+
+            if (document.getElementById('password').value ==
+                document.getElementById('confirm_password').value) {
+                document.getElementById('message').style.color = 'green';
+                document.getElementById('message').innerHTML = '';
+            } else {
+                document.getElementById('message').style.color = '#f13c20';
+                document.getElementById('message').innerHTML = 'Password does not match';
+            }
+        }
+    </script>
+  </body>
+</html>

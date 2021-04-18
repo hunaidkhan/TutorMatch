@@ -1,0 +1,154 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        html {
+            background-color: #e4d8d4 ;
+        }
+        body{
+            color: #A33327 ;
+            font-family: 'Poppins', sans-serif;
+            font-size: 25px;
+            font-weight: 600;
+        }
+        h1{
+            color: #83563f;
+            font-family: 'Lora', serif;
+            font-size: 50px;
+        }
+        h1 {text-align: center;}
+        p {text-align: center;}
+        a {text-align: center;}
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 23%;
+
+        }
+        
+
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        a{
+            color: #e4d8d4;
+        }
+
+        .maxsize
+        {
+            width: 64;
+            height: 64;
+        }
+        .container {
+            position: relative;
+            width: 50%;
+            color: #e4d8d4;
+        }
+
+        .image {
+            display: block;
+        width: 100%;
+        height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #008CBA;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .grow img{
+            transition: 1s ease;
+        }
+
+        .grow img:hover{
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2);
+            transition: 1s ease;
+        }
+        .img2:hover{
+            -moz-box-shadow: 0 0 10px #ccc;
+            -webkit-box-shadow: 0 0 10px #ccc;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+
+        
+
+
+        
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css%22%3E">
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <p>Email: a@a.com</p>
+    <p>Discord: HackVH</p>
+    <p>Phone Number: (111) 222 - 3333</p>
+    
+
+
+    <div class="row">
+        <div class="center">
+            <a href="reddit.com">
+                <img alt="Reddit" class = "img2" src="{%static 'contact/reddit.png'%}"
+                width=100" height="100" >
+            </a>
+            <a href="https://discord.gg/SrUE9FEt">
+                <img alt="Discord" class = "img2" src="{%static 'contact/discord.png'%}"
+                width=100" height="100">
+            </a>
+            <a href="https://www.youtube.com/channel/UCkWvhEAnQcQ6iLdJquAQPcw">
+                <img alt="Youtube" class = "img2" src="{%static 'contact/youtube.png'%}"
+                width=100" height="100">
+            </a>
+        </div>
+        
+        
+
+    </div>
+
+
+</body>
+</html>

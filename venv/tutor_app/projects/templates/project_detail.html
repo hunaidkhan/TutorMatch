@@ -1,0 +1,215 @@
+{%load static%}
+{% block page_content %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap" rel="stylesheet">
+    <style>
+        .nav-item
+        {
+            padding: 5px;
+        }
+        .nav-link
+        {
+            font-size: 120%;
+        }
+        .navbar{
+        
+            width: 100%;
+            /* margin-bottom: 20px; */
+            height: 100px;
+        }
+        .search_button
+        {
+            background-color: #f13c20;
+            border: none;
+            border-radius: 8px;
+            color: white;
+        }
+        *
+        {
+            overflow: hidden;
+        }
+        #profile_img
+        {
+            width: 43%;
+            float: right;
+            height: 530px;
+            transform: scale(1);
+        box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.5s, transform 0.5s;
+        }
+        #profile_img:hover{
+            transform: scale(1);
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.5s, transform 0.5s;
+        }
+        .image
+        {
+            margin-top: -145px;
+            margin-left: 500px;
+            position: absolute;
+            z-index: 10;
+            
+        }
+        .row
+        {
+            /* background-color: #fc4445; */
+        }
+        .wrapper h1{
+            font-family: 'Ramabhadra';
+            font-size: 300%;
+            color: #f13c20;
+            
+        }
+        .row{
+            color: black;
+            font-family: 'Roboto';
+        }
+        .text
+        {
+            margin-left: 100px;
+            margin-top: 80px;
+        }
+        .text_content
+        {
+            margin-top: 30px;
+        }
+        .wrapper
+        {
+            background-color: cornsilk;
+            padding-bottom: 140px;
+
+        }
+        @keyframes transitionIn
+        {
+            from{
+                opacity: 0;
+                transform: translateY(20px);
+                transform: translate(-20px);
+            }
+            to{
+                opacity: 1;
+                transform: translate(0);
+
+            }
+        }
+        @keyframes transition2
+        {
+            from{
+                padding: 1px;
+            }
+            to{
+                padding: 13px;
+            }
+        }
+        .wrapper
+        {
+            animation: transitionIn 1s;
+        }
+        .text_content
+        {
+            animation: transition2 1s;
+        }
+        #register
+        {
+            background-color: #f13c20;
+            border: none;
+            border-radius: 7px;
+            align-items: center;
+            /* margin-left: 600px;
+            margin-top: 60px;
+            margin-bottom: 100px; */
+            width: 100px;
+            height: 45px;
+            font-size: 120%;
+            padding: 5px;
+            transform: scale(1);
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.5s, transform 0.5s;
+        }
+        #register:hover{
+            background-color: #a13423;
+            transform: scale(1.1);
+        box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.5s, transform 0.5s;
+        }
+    </style>
+
+    <title>Details</title>
+  </head>
+  <body>
+      <!-- NavBar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="localhost:8000"><img src="{% static 'tutor_page/logo.png'%}" alt="" id="logo_nav"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="http://localhost:8000">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="http://localhost:8000/login">Login/Register</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="">FAQs</a>
+              </li>
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link active" href="http://localhost:8000/contact/" tabindex="-1">Contact Us</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 search_button" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    <div class="wrapper">
+        <h1 class="text">{{ project.title }}</h1>
+        <div class="row">
+            <div class="col-md-4 text text_content">
+                <h5>About the Tutor:</h5>
+                <p>{{ project.description }}</p>
+                <br>
+                <h5>Subjects:</h5>
+                <p>{{ project.subjects }}</p>
+                <div><button id="register" class="btn btn-primary text-center">Schedule</button></div>
+            </div>
+            <div class="image">
+                <img src="{% static 'tutor_page/headshot2.jpg'%}"  id="profile_img" alt="...">
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+{%endblock%}
